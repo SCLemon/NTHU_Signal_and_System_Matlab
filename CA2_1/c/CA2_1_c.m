@@ -1,0 +1,10 @@
+nx = 0:200;
+x = cos(0.1*pi*nx);
+nh =0:3;
+h=power(-2,nh);
+nyb = nx(1) + nh (1);
+nye = nx(length(x)) + nh(length(h));
+ny = nyb:nye;
+y = conv(x,h);
+stem(ny, y);
+title('y[n]');
